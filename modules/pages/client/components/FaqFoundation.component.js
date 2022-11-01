@@ -10,19 +10,10 @@ export default function FaqFoundation() {
       <div className="faq-question" id="what-is-your-legal-status">
         <h3>{t("What's your legal status?")}</h3>
         <Trans t={t} ns="pages">
-          As of May 2022{' '}
-          <a href="https://find-and-update.company-information.service.gov.uk/company/09489825/filing-history">
-            Trustroots Foundation is dissolved
-          </a>
-          . What does it mean for the community? We don’t know exactly yet!
-        </Trans>
-        <br />
-        <br />
-        <Trans t={t} ns="pages">
-          Prior to that, the website was owned and operated by{' '}
-          <a href="/foundation">Trustroots Foundation</a>, a non-profit Limited
-          by Guarantee (LBG) under section 60 exemption, registered in the
-          United Kingdom in March 2015.
+          The website is owned and operated by{' '}
+          <a href="/foundation">Trustroots Foundation</a>, a non-profit
+          Limited by Guarantee (LBG) under section 60 exemption, registered in
+          the United Kingdom in March 2015.
         </Trans>
       </div>
 
@@ -63,14 +54,15 @@ export default function FaqFoundation() {
           </li>
         </ul>
         <Trans t={t} ns="pages">
-          Some typical LBGs in the UK would be clubs and membership
-          organisations such as workers’ co-operatives, non-governmental
-          organizations (NGOs) and charities. For example the{' '}
+          Some typical LBGs in the UK would be clubs and membership organisations such as workers’ co-operatives, non-governmental organizations (NGOs) and charities. For example the{' '} 
           <a href="https://www.osmfoundation.org/">OpenStreetMap Foundation</a>,{' '}
           the
           <a href="https://okfn.org/">Open Knowledge Foundation</a> and the{' '}
           <a href="https://www.hackspace.org.uk/">UK Hackspace Foundation</a>{' '}
           are LGBs.
+        </Trans>
+        <Trans t={t} ns="pages">
+          Please note that as per May 2022 our foundation is not officially active. As such, it doesn't have to deal with the official paperwork that maintaining the foundation entails. This new status doesn't change anything in terms of legal ownership, nor for the operation of Trustroots.
         </Trans>
         <h4>{t('More reading:')}</h4>
         <ul>
@@ -92,8 +84,7 @@ export default function FaqFoundation() {
           <li>
             <a
               title="Section 60 exemption requirements"
-              href="https://www.legislation.gov.uk/ukpga/2006/46/section/62"
-            >
+              href="https://www.legislation.gov.uk/ukpga/2006/46/section/62">
               {t('Section 60 exemption requirements')}
             </a>
           </li>
@@ -113,33 +104,18 @@ export default function FaqFoundation() {
         <br />
         <br />
         <Trans t={t} ns="pages">
-          Additionally our by-laws (articles of association) specifically
-          prohibit selling the users database and specify that the company code
-          will be licensed under an
-          <a href="https://github.com/trustroots/trustroots/#license">
-            open source license
-          </a>
+          Additionally our by-laws (articles of association) specifically prohibit selling the users database and specify that the company code will be licensed under an <a href="https://github.com/trustroots/trustroots/#license">open source license</a>.
         </Trans>
-        .
       </div>
 
       <div
         className="faq-question"
-        id="how-do-you-want-to-make-the-project-financially-sustainable"
-      >
+        id="finances">
         <h3>
-          {t('How do you want to make the project financially sustainable?')}
+          {t('How is the project financed?')}
         </h3>
         <Trans t={t} ns="pages">
-          <a href="/contribute">Donations</a> and grants are the most likely
-          ways. There are many inspiring organisations out there serving as
-          great examples:{' '}
-          <a href="http://www.abgefahren-ev.de/">Abgefahren e.V.</a>{' '}
-          (Hitchwiki), <a href="https://www.bevolunteer.org/">BeVolunteer</a>,{' '}
-          <a href="https://servas.org/">Servas</a>,{' '}
-          <a href="https://wwoof.net/">WWOOF</a> and many more. Again, if you
-          have experience with this it would be great if you{' '}
-          <a href="/support">contact us</a>.
+          Maintaining Trustroots does not have to cost a lot of money, and the current costs are paid for by volunteers. Many people think grants are nice to get, but they also add more complexity to an organisation. We prefer to keep it more simple and like to be cost-effective.
         </Trans>
       </div>
 
