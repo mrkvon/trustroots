@@ -62,7 +62,7 @@ export default function FaqFoundation() {
           are LGBs.
         </Trans>
         <Trans t={t} ns="pages">
-          Please note that as per May 2022 our foundation is not officially active. As such, it doesn't have to deal with the official paperwork that maintaining the foundation entails. This new status doesn't change anything in terms of legal ownership, nor for the operation of Trustroots.
+          Please note that as per May 2022 the foundation is not officially active. As such, we don't have to deal with the official paperwork that maintaining the foundation entails. This new status doesn't change anything in terms of legal ownership, nor for the operation of Trustroots.
         </Trans>
         <h4>{t('More reading:')}</h4>
         <ul>
