@@ -92,8 +92,8 @@ function localAvatarUrl(user, size) {
   if (isValid) {
     // Cache buster
     const timestamp = user.updated ? new Date(user.updated).getTime() : '';
-    // 32 is the smallest and 2048 biggest file size we're generating.
-    const fileSize = Math.min(Math.max(size, 32), 2048);
+    // available file sizes are powers of 2 between 32 and 2048
+    const fileSize = roundUpToPower2(size, 32, 2048);
 
     return `/uploads-profile/${user._id}/avatar/${fileSize}.jpg?${timestamp}`;
   }
@@ -139,4 +139,24 @@ function avatarUrl(user, source, size, defaultAvatar) {
     (source === 'facebook' && facebookAvatarUrl(user, size)) ||
     `${defaultAvatar}?none`
   );
+}
+
+/**
+ * Round a number up to a power of 2 within given boundaries
+ * @param {number} n - number to round, must be positive
+ * @param {number} min - lower boundary, must be positive
+ * @param {number} max - upper boundary, must be positive
+ * @returns {number} - the number rounded up to power of 2 within the boundaries
+ */
+function roundUpToPower2(n, min, max) {
+  // Find powers of 2 of the boundaries
+  const minPower = Math.ceil(Math.log2(min));
+  const maxPower = Math.floor(Math.log2(max));
+
+  // Find power of 2 of the input
+  const power = Math.ceil(Math.log2(n));
+
+  const powerWithinBoundaries = Math.min(Math.max(power, minPower), maxPower);
+
+  return 2 ** powerWithinBoundaries;
 }
