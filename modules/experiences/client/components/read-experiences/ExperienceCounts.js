@@ -108,8 +108,10 @@ export default function ExperienceCounts({ experiences }) {
     };
 
     const met = getInteractionPercentage('met');
-    const guest = getInteractionPercentage('guest');
-    const host = getInteractionPercentage('host');
+    // they were guest when experience was from host
+    const guest = getInteractionPercentage('host');
+    // they were host when experience was from guest
+    const host = getInteractionPercentage('guest');
 
     if (host === 100) {
       interactions.push(t('They hosted everyone.'));
